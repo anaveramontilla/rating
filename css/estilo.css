@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#body {
+    background-color: #e8f7fa;
+    transition: background-color 1s ease-in-out;
+    font-family: 'Pacifico';
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.rating > button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #31a8bd;
+    font-size: 4.5em;
+    margin: 0.1em;
+    transition: color 0.3s;
+}
+
+.rating > button:hover {
+    cursor: pointer;
+    color: red;
+}
+
+button:hover ~ button {
+    cursor: pointer;
+    color: red;
+}
+
+#R1, #R2, #R3, #R4, #R5 {
+    color: red;
+}
+
+#mensaje {
+    color: #0c7183;
+    font-size: 4em;
+    margin-bottom: 30px;
+}
+
+/*Animación rebote para corazones*/
+@keyframes efectoRebote {
+    0% {
+        font-size: 4.5em;
+    }
+    50% {
+        font-size: 5em;
+    }
+    100% {
+        font-size: 4.5em;
+    }
+}
+
+/*Móvil*/
+@media (max-width: 600px) {
+    .rating > button {
+        font-size: 3em;
+    }
+    
+    #mensaje {
+        font-size: 3em;
+    }
+}
